@@ -1,5 +1,158 @@
 [
   {
+    "title": "Beroxity Music — v0.4.220 Alpha",
+    "version": "v0.4.220 Alpha",
+    "date": "22 October 2026",
+    "status": "Published",
+    "summary": "Major update introducing an immersive full-window Now Playing experience, real-time audio visualizer, advanced queue management, drag-and-drop song ordering, and persistent recently played history. Includes a redesigned playback interface, improved responsive layouts, smarter shuffle and queue behaviour, extensive bug fixes, and further performance optimisations while preserving discord rich presence and stream dock integration.",
+    "sections": [
+      {
+        "title": "🎶 Upcoming Queue & Listening History",
+        "items": [
+          "Introduced a dedicated Upcoming queue displaying current and upcoming tracks.",
+          "Added manual queue management with priority over automatically queued songs.",
+          "Introduced persistent Recently Played history, including played and skipped tracks.",
+          "Added Add to Queue, Play Next, and Remove from Upcoming actions.",
+          "Added the ability to clear listening history.",
+          "Manual queue additions and listening history now persist between app restarts.",
+          "Improved queue ordering, track labels, and queue counters."
+        ]
+      },
+      {
+        "title": "🖱️ Drag & Drop Queue Management",
+        "items": [
+          "Added drag-and-drop support for songs from Library, Search, and Playlists.",
+          "Enabled direct rearranging of tracks within the Upcoming queue.",
+          "Added support for repositioning automatically queued tracks.",
+          "Introduced visual drop-position indicators and clearer drag highlighting.",
+          "Play Next now prioritises selected tracks at the front of Upcoming.",
+          "Add to Queue places tracks after manually queued songs but before automatic tracks.",
+          "Removed unnecessary queue movement arrows and the Clear Added button.",
+          "Disabled dragging in Recently Played and simplified the Upcoming layout."
+        ]
+      },
+      {
+        "title": "🎧 Immersive Now Playing Experience",
+        "items": [
+          "Introduced a full-window Now Playing experience.",
+          "Added large, responsive album artwork with a dynamic blurred background.",
+          "Displays the current song title, artist, album, and personal listening count.",
+          "Integrated playback, shuffle, repeat, seeking, volume, and favourite controls.",
+          "Added a Back to Music button, close button, and escape key support.",
+          "Music continues playing when switching between the main application and expanded player."
+        ]
+      },
+      {
+        "title": "📋 Now Playing Queue Drawer",
+        "items": [
+          "Introduced a sliding queue drawer within the expanded player.",
+          "Access Upcoming and Recently Played without leaving Now Playing.",
+          "Open and close the queue independently of playback.",
+          "Added separate queue visibility preferences for normal and expanded player modes.",
+          "Queue drawer dynamically resizes the Now Playing layout.",
+          "Improved full-height scrolling, panel sizing, and queue animations."
+        ]
+      },
+      {
+        "title": "🌌 Live Audio Visualizer",
+        "items": [
+          "Introduced a real-time audio-reactive visualizer.",
+          "Added animated purple frequency bars that respond to music and bass frequencies.",
+          "Visualizer movement dynamically responds to audio volume and frequency activity.",
+          "Added atmospheric purple lighting and smooth background transitions.",
+          "Introduced a Settings toggle to enable or disable the visualizer.",
+          "Visualizer preferences are saved between sessions.",
+          "Improved bass detection, animation smoothness, and frequency responsiveness."
+        ]
+      },
+      {
+        "title": "🎨 Playback Controls & Visual Design",
+        "items": [
+          "Redesigned playback buttons with individual dark-purple control backgrounds.",
+          "Introduced subtle purple hover effects and a unified progress bar panel.",
+          "Moved Favourite alongside Shuffle and Queue alongside Repeat.",
+          "Combined mute and volume controls into a cleaner interface.",
+          "Improved the volume slider with a hover-only thumb and removed the percentage label.",
+          "Improved album artwork sizing, alignment, and overall player consistency.",
+          "Introduced consistent thin purple scrollbars throughout the application."
+        ]
+      },
+      {
+        "title": "📐 Responsive Layout & Navigation",
+        "items": [
+          "Improved application resizing across different window dimensions.",
+          "Introduced minimum window dimensions to prevent layout issues.",
+          "Added a responsive icon-only sidebar with smoother animations.",
+          "Added fading navigation labels during sidebar transitions.",
+          "Improved the expanded Now Playing split-screen layout.",
+          "Optimised queue drawer height, scrolling, and responsive resizing.",
+          "Preserved queue navigation state when switching between views.",
+          "Expanded Library and Storage settings and improved Settings alignment."
+        ]
+      },
+      {
+        "title": "🔀 Playback & Volume Fixes",
+        "items": [
+          "Fixed Shuffle not correctly rearranging the Upcoming queue.",
+          "Corrected mismatches between displayed and actual shuffled playback order.",
+          "Improved mute and unmute behaviour.",
+          "Previous volume level is now restored when unmuting.",
+          "Fixed incorrect volume slider fill and alignment.",
+          "Maintained uninterrupted playback when switching application views."
+        ]
+      },
+      {
+        "title": "🛠️ Now Playing & Interface Fixes",
+        "items": [
+          "Fixed the queue drawer overlapping song information and playback controls.",
+          "Fixed queue visibility resetting when switching player modes.",
+          "Corrected unwanted layout changes when toggling the queue.",
+          "Removed the duplicate bottom playback bar from expanded Now Playing.",
+          "Prevented interaction with background application elements while expanded.",
+          "Removed visible application edges and unwanted scrolling in expanded mode.",
+          "Improved keyboard navigation and player layout stability."
+        ]
+      },
+      {
+        "title": "💿 Library & Queue Bug Fixes",
+        "items": [
+          "Fixed misaligned columns in music track lists.",
+          "Corrected overlapping duration labels and action buttons.",
+          "Improved row alignment across Library, Search, and Playlists.",
+          "Fixed dragged songs not appearing in the queue.",
+          "Corrected Add to Queue placement and inconsistent drag ordering.",
+          "Fixed hidden and duplicate queue entries.",
+          "Prevented deleted songs from reappearing in Upcoming.",
+          "Fixed incorrect queue counts, misleading labels, and songs being re-added unexpectedly.",
+          "Corrected virtualised queue scrolling issues."
+        ]
+      },
+      {
+        "title": "⚡ Performance & Quality Improvements",
+        "items": [
+          "Preserved virtualised music library and queue rendering.",
+          "Retained previous memory optimisations and lazy audio loading.",
+          "Improved scrolling responsiveness in large music queues.",
+          "Improved navigation and browsing performance with large libraries.",
+          "Optimised visualizer animation efficiency.",
+          "Refined queue drawer animations and sidebar transitions.",
+          "Improved overall interface consistency, scrolling, and track-list alignment."
+        ]
+      },
+      {
+        "title": "🔗 Compatibility & Existing Features",
+        "items": [
+          "Preserved existing music libraries, playlists, and song metadata.",
+          "Maintained shuffle, repeat, track skipping, and volume controls.",
+          "Retained playback resume positions and listening statistics.",
+          "Preserved Discord Rich Presence functionality.",
+          "Maintained Stream Dock hardware integration.",
+          "Ensured existing playback and library features remain available alongside the new interface."
+        ]
+      }
+    ]
+  },
+  {
     "title": "Beroxity Music — v0.3.67 Alpha",
     "version": "v0.3.67 Alpha",
     "date": "22 October 2026",
