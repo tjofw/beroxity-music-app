@@ -1,0 +1,14 @@
+[
+  {
+    "version": "Alpha · Development Update",
+    "date": "",
+    "title": "Major Development Update",
+    "summary": "A redesigned listening experience, advanced queue controls, and a live audio visualizer.",
+    "sections": [
+      {"title":"New features", "items":["Immersive full-window Now Playing experience with large album artwork and a responsive queue drawer.","Real-time purple audio visualizer with a persistent on/off setting.","Upcoming and Recently Played queue tabs; listening history persists across restarts.","Drag and drop songs into Upcoming and rearrange the playback queue."]},
+      {"title":"Queue improvements", "items":["Play Next prioritizes a track at the front of the queue.","Add to Queue places manually selected songs ahead of automatically queued tracks.","Remove individual upcoming tracks without removing songs from the library.","Separate remembered queue drawer states for normal and expanded player views."]},
+      {"title":"Interface improvements", "items":["Refined playback buttons, volume slider, progress controls, and purple scrollbars.","Responsive layout and auto-collapsing sidebar for smaller windows.","Improved queue drawer sizing, scrolling, and Now Playing transitions."]},
+      {"title":"Fixes", "items":["Fixed queue duplicates, ordering issues, and incorrect counts.","Fixed shuffle playback order not matching Upcoming.","Fixed tracks reappearing after removal and drag-and-drop insertion issues.","Fixed overlapping track actions, song durations, and queue controls on smaller windows."]}
+    ]
+  }
+]
