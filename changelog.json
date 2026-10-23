@@ -1,1 +1,100 @@
-[]
+[
+  {
+    "title": "Beroxity Music — v0.1.0 Alpha",
+    "version": "v0.1.0 Alpha",
+    "date": "21 October 2026",
+    "status": "Published",
+    "summary": "🎉 Introducing Beroxity Music\n\nWelcome to the first Alpha version of Beroxity Music, a desktop music player designed to give you complete control over your personal music collection.\n\nBuilt with a modern interface, local music storage, playlist management, and hardware integration, Beroxity Music focuses on making listening to your favourite music simple and enjoyable.\n\nThis initial release introduces the core features of the application, alongside several playback improvements and bug fixes.",
+    "sections": [
+      {
+        "title": "🎵 Music Library",
+        "items": [
+          "Import individual songs or entire music folders.",
+          " Support for MP3, WAV, OGG, M4A, AAC, and FLAC files.",
+          " Keep your imported music saved locally between sessions.",
+          " Search your collection by song, artist, or album.",
+          " Browse your music through organised album and artist views.",
+          " Favourite and unfavourite your tracks.",
+          "Create, manage, and delete custom playlists.",
+          "Add or remove individual songs from playlists.",
+          "Remove unwanted tracks from your library."
+        ]
+      },
+      {
+        "title": "🎨 Interface & Design",
+        "items": [
+          "Introduced the signature Beroxity Music dark purple theme.",
+          "Added dedicated Home, Search, Library, and Settings sections.",
+          "Implemented a collapsible navigation sidebar.",
+          "Added persistent playback controls.",
+          "Improved navigation between songs, albums, and playlists.",
+          "Created a clean, modern desktop listening experience."
+        ]
+      },
+      {
+        "title": "💿 Song Information & Artwork",
+        "items": [
+          "Automatically read embedded song metadata.",
+          "Added MusicBrainz integration for finding song information.",
+          "Introduced online album artwork matching.",
+          "Added the ability to manually edit song titles, artists, and albums.",
+          "Support for uploading custom album artwork."
+        ]
+      },
+      {
+        "title": "▶️ Music Playback",
+        "items": [
+          "Play, pause, skip, and return to previous tracks.",
+          "Adjust volume or mute playback instantly.",
+          "Seek through songs using an interactive progress bar.",
+          "View and manage the playback queue.",
+          "Shuffle tracks for randomised listening.",
+          "Repeat individual songs or entire queues.",
+          "Improved automatic transitions between tracks."
+        ]
+      },
+      {
+        "title": "🎛️ Stream Dock Integration",
+        "items": [
+          "Introduced the custom Beroxity Music Stream Dock plugin.",
+          "Added Play/Pause and Previous/Next track controls.",
+          "Added Volume Up/Down and Mute/Unmute controls.",
+          "Added Shuffle and Repeat playback controls.",
+          "Added live Now Playing information, including song titles and artists.",
+          "Introduced dynamic playback icons and active button indicators.",
+          "Added real-time synchronisation between the desktop app and Stream Dock.",
+          "Implemented automatic reconnection and offline indicators.",
+          "Added local WebSocket communication for responsive hardware controls."
+        ]
+      },
+      {
+        "title": "🛠️ Bug Fixes — Shuffle",
+        "items": [
+          "Fixed shuffle not properly randomising the playback queue.",
+          "Improved randomised song order and reduced unwanted repeats.",
+          "Fixed playback queue display synchronisation.",
+          "Corrected inconsistencies between desktop and Stream Dock shuffle controls."
+        ]
+      },
+      {
+        "title": "🔁 Bug Fixes — Repeat",
+        "items": [
+          "Fixed Repeat One not consistently replaying the selected track.",
+          "Fixed Repeat All not correctly looping the queue.",
+          "Improved automatic transitions between tracks.",
+          "Corrected unexpected end-of-queue behaviour."
+        ]
+      },
+      {
+        "title": "🚀 Coming Soon",
+        "items": [
+          "Custom Stream Dock button artwork.",
+          "Live album covers on supported hardware buttons.",
+          "Additional hardware playback controls.",
+          "Expanded integration capabilities.",
+          "Further UI, audio engine, and performance improvements."
+        ]
+      }
+    ]
+  }
+]
