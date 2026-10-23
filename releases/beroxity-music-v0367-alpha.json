@@ -1,0 +1,143 @@
+{
+  "title": "Beroxity Music — v0.3.67 Alpha",
+  "version": "v0.3.67 Alpha",
+  "date": "22 October 2026",
+  "status": "Published",
+  "summary": "Major performance and memory optimisation update, reducing memory usage by 78.3% (approximately 2.48 GB saved). Introduced virtualised track lists, lazy audio loading, improved playlist management, listening statistics, discord rich presence, expanded settings, and faster library navigation. Includes multiple bug fixes, improved artwork handling, and better support for large music libraries.",
+  "sections": [
+    {
+      "title": "🎵 Playlist Improvements",
+      "items": [
+        "Added the ability to delete playlists.",
+        "Improved adding and removing individual songs from playlists.",
+        "Introduced Select All for bulk song selection.",
+        "Enabled songs to be included in multiple playlists.",
+        "Improved playlist management and organisation."
+      ]
+    },
+    {
+      "title": "💿 Music Library Improvements",
+      "items": [
+        "Improved searching by song title, artist, and album.",
+        "Improved automatic song duration detection and persistence.",
+        "Fixed overlapping Edit and Favourite buttons.",
+        "Improved album cover handling and artwork display.",
+        "Continued improvements to music library reliability."
+      ]
+    },
+    {
+      "title": "⚙️ Settings & Listening Statistics",
+      "items": [
+        "Added new playback preferences in Settings.",
+        "Introduced listening statistics for individual songs.",
+        "Added a leaderboard showing the most-played songs.",
+        "Added Stream Dock integration information.",
+        "Introduced a toggle for Discord Rich Presence.",
+        "Added library and storage management options.",
+        "Added an About Us section."
+      ]
+    },
+    {
+      "title": "🎮 Discord Rich Presence",
+      "items": [
+        "Introduced Discord Rich Presence integration.",
+        "Added live song information to Discord activity.",
+        "Added album names and cover artwork to Rich Presence.",
+        "Added the ability to enable or disable Discord Rich Presence in Settings.",
+        "Fixed an issue preventing Discord activity from appearing.",
+        "Improved album artwork matching and automatic updates.",
+        "Introduced artwork prefetching for upcoming tracks.",
+        "Reduced delays when updating Discord activity."
+      ]
+    },
+    {
+      "title": "🎛️ Stream Dock Integration",
+      "items": [
+        "Preserved existing Stream Dock hardware integration.",
+        "Maintained playback controls, including track skipping, volume, shuffle, and repeat.",
+        "Retained real-time playback state synchronisation.",
+        "Ensured compatibility with Discord Rich Presence and updated playback systems."
+      ]
+    },
+    {
+      "title": "🧠 Memory Optimisations",
+      "items": [
+        "Removed large audio Blobs from React application state.",
+        "Introduced lightweight song metadata to reduce memory overhead.",
+        "Implemented lazy audio loading directly from IndexedDB.",
+        "Audio files are now loaded only when needed for playback.",
+        "Added automatic cleanup of unused audio object URLs.",
+        "Improved the release of unused playback resources.",
+        "Significantly reduced memory consumption with large music libraries."
+      ]
+    },
+    {
+      "title": "🗄️ Music Storage & Metadata",
+      "items": [
+        "Preserved the existing IndexedDB music library without requiring reimporting.",
+        "Updated song importing and deletion to work with the optimised storage system.",
+        "Updated metadata editing and song duration processing.",
+        "Retained song IDs, titles, artists, albums, artwork, durations, and file sizes.",
+        "Maintained compatibility with existing saved music and playlists."
+      ]
+    },
+    {
+      "title": "⚡ Interface & Rendering Performance",
+      "items": [
+        "Introduced virtualised track lists for improved performance.",
+        "Only visible tracks and a small buffer are now rendered.",
+        "Added virtualisation to library search results.",
+        "Added virtualisation to playlist track lists.",
+        "Optimised the Up Next playback queue with virtualised rendering.",
+        "Reduced the number of album covers rendered simultaneously.",
+        "Updated scrolling behaviour for large music collections.",
+        "Preserved the existing Beroxity Music interface design."
+      ]
+    },
+    {
+      "title": "🚀 Optimisations",
+      "items": [
+        "Reduced unnecessary react state updates and interface re-renders.",
+        "Optimised playback progress updates.",
+        "Improved navigation responsiveness across the application.",
+        "Reduced rendering overhead when browsing large libraries.",
+        "Preserved shuffle, repeat, volume, and track-skipping functionality.",
+        "Maintained playback resume positions and listening statistics."
+      ]
+    },
+    {
+      "title": "🔗 Integration Performance",
+      "items": [
+        "Reduced repeated Discord artwork processing.",
+        "Optimised artwork-related calculations.",
+        "Maintained album artwork lookup and prefetching.",
+        "Preserved Discord Rich Presence and Stream Dock compatibility."
+      ]
+    },
+    {
+      "title": "📊 Performance Results",
+      "items": [
+        "Tested memory usage with a library containing 1,622 songs.",
+        "Original memory usage: 3,170 MB.",
+        "After lazy audio loading: 1,712 MB.",
+        "After track list virtualisation: 687 MB.",
+        "Achieved a 78.3% reduction in measured memory usage.",
+        "Reduced measured memory consumption by approximately 2.48 GB.",
+        "Improved browsing speed, navigation responsiveness, and large-library performance."
+      ]
+    },
+    {
+      "title": "🔮 Upcoming Improvements",
+      "items": [
+        "Generate lightweight album artwork thumbnails.",
+        "Use optimised thumbnails throughout the library and playlists.",
+        "Keep full-resolution artwork for the music player.",
+        "Investigate memory usage caused by base64-encoded artwork.",
+        "Continue profiling react performance with large music libraries.",
+        "Investigate and reduce IndexedDB overhead.",
+        "Improve Discord album artwork matching and Rich Presence performance.",
+        "Continue optimising memory usage and playback efficiency."
+      ]
+    }
+  ]
+}
