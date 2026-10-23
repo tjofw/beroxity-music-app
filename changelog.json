@@ -4,7 +4,7 @@
     "version": "v0.1.0 Alpha",
     "date": "21 October 2026",
     "status": "Published",
-    "summary": "🎉 Introducing Beroxity Music\n\nWelcome to the first Alpha version of Beroxity Music, a desktop music player designed to give you complete control over your personal music collection.\n\nBuilt with a modern interface, local music storage, playlist management, and hardware integration, Beroxity Music focuses on making listening to your favourite music simple and enjoyable.\n\nThis initial release introduces the core features of the application, alongside several playback improvements and bug fixes.",
+    "summary": "Introducing Beroxity Music! This initial release introduces the core features of the application, alongside several playback improvements and bug fixes.",
     "sections": [
       {
         "title": "🎵 Music Library",
