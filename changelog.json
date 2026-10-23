@@ -1,5 +1,193 @@
 [
   {
+    "title": "Beroxity Music — v0.6.02 Alpha",
+    "version": "v0.6.02 Alpha",
+    "date": "23 October 2026",
+    "status": "Published",
+    "summary": "Major audio engine update introducing smart crossfade, gapless playback, a 10-band equalizer with custom presets, and intelligent audio normalization. Includes smooth playback fades, improved visualizer animations, major performance and memory optimizations, persistent manual queue management, save queue functionality, and enhanced playlist playback. Also features extensive crossfade stability fixes, improved artwork handling, and a more responsive interface.",
+    "sections": [
+      {
+        "title": "🎵 Smooth Playback & Audio Fades",
+        "items": [
+          "Added smooth audio fade-out when pausing music.",
+          "Added smooth audio fade-in when resuming playback.",
+          "Introduced a natural cooldown animation for the Now Playing visualizer.",
+          "Visualizer bars gradually fall when playback is paused instead of stopping instantly.",
+          "Improved synchronization between audio playback and visualizer animations.",
+          "Improved rapid play/pause handling to prevent overlapping fade effects.",
+          "Preserved playback position and volume settings during audio transitions."
+        ]
+      },
+      {
+        "title": "🔀 Crossfade & Gapless Playback",
+        "items": [
+          "Introduced Crossfade Playback for smooth transitions between songs.",
+          "Added adjustable crossfade duration from 1 to 12 seconds.",
+          "Introduced Gapless Playback to reduce silence between consecutive tracks.",
+          "Added dedicated Crossfade and Gapless controls in Settings.",
+          "Implemented automatic preloading of upcoming tracks.",
+          "Added persistent playback preferences across application restarts.",
+          "Preserved smooth pause and resume fades during playback transitions."
+        ]
+      },
+      {
+        "title": "🧠 Smart Crossfade Engine",
+        "items": [
+          "Introduced Smart Crossfade with intelligent song transition analysis.",
+          "Added Standard and Smart Crossfade playback modes.",
+          "Introduced Balanced transition settings.",
+          "Added automatic analysis of song intros and outros.",
+          "Added intelligent crossfade duration adjustments based on song characteristics.",
+          "Improved transition timing for songs with quiet endings.",
+          "Introduced loudness-aware balancing between overlapping tracks.",
+          "Added automatic fallback when Smart Crossfade analysis is unavailable.",
+          "Improved Smart Crossfade analysis efficiency and transition reliability."
+        ]
+      },
+      {
+        "title": "🎚️ 10-Band Audio Equalizer",
+        "items": [
+          "Introduced a fully adjustable 10-band audio equalizer.",
+          "Added Flat, Bass Boost, Rock, Pop, and Vocal presets.",
+          "Added individual frequency adjustments ranging from -12 dB to +12 dB.",
+          "Introduced adjustable preamp control to help reduce audio distortion.",
+          "Added an Equalizer enable/disable toggle.",
+          "Enabled real-time audio adjustments during playback.",
+          "Integrated Equalizer controls into the Settings dashboard.",
+          "Added persistent storage for equalizer preferences."
+        ]
+      },
+      {
+        "title": "💾 Custom Equalizer Presets",
+        "items": [
+          "Added support for creating and saving custom equalizer presets.",
+          "Introduced custom names for personal sound profiles.",
+          "Custom presets save frequency levels and preamp settings.",
+          "Added quick preset loading and deletion.",
+          "Introduced a dedicated Saved Presets section.",
+          "Added a quick-access Equalizer button to Now Playing.",
+          "Introduced an Equalizer popup for adjusting sound without leaving playback.",
+          "Styled the Equalizer popup to match the existing dark purple interface."
+        ]
+      },
+      {
+        "title": "🔊 Audio Normalization",
+        "items": [
+          "Introduced Audio Normalization to balance volume differences between songs.",
+          "Added Quiet, Balanced, and Loud normalization modes.",
+          "Implemented automatic local audio analysis.",
+          "Added an Audio Normalization enable/disable toggle in Settings.",
+          "Introduced caching for previously analyzed tracks.",
+          "Integrated Audio Normalization with the existing Equalizer.",
+          "Added smooth gain adjustments to reduce abrupt volume changes.",
+          "Saved normalization preferences between sessions.",
+          "Added analysis status feedback for the currently playing song."
+        ]
+      },
+      {
+        "title": "⚡ Advanced Crossfade Processing",
+        "items": [
+          "Introduced equal-power crossfade curves for smoother transitions.",
+          "Applied 10-band Equalizer processing to outgoing crossfade audio.",
+          "Integrated Audio Normalization into outgoing track transitions.",
+          "Added independent normalization for overlapping tracks.",
+          "Improved volume balancing between incoming and outgoing songs.",
+          "Enabled both overlapping tracks to contribute to the audio visualizer.",
+          "Improved crossfade timing near the end of tracks.",
+          "Preserved gapless preloading and existing playback controls."
+        ]
+      },
+      {
+        "title": "🛠️ Crossfade Stability & Bug Fixes",
+        "items": [
+          "Fixed songs cutting off immediately during crossfade transitions.",
+          "Fixed premature cleanup of outgoing audio sources.",
+          "Improved synchronization between incoming and outgoing tracks.",
+          "Improved crossfade preparation to reduce interruptions.",
+          "Updated outgoing audio handling to wait for playback readiness.",
+          "Added fallback handling when audio preparation fails.",
+          "Addressed potential brief silence during song transitions.",
+          "Improved cleanup of temporary crossfade audio players.",
+          "Improved handling of interrupted playback and rapid track changes.",
+          "Maintained compatibility with queue management, shuffle, equalizer, and audio normalization."
+        ]
+      },
+      {
+        "title": "🧠 Memory & Performance Optimizations",
+        "items": [
+          "Optimized album artwork to reduce unnecessary memory consumption.",
+          "Introduced artwork compression for existing library tracks.",
+          "Improved cleanup of unused audio resources and preloaded tracks.",
+          "Reduced unnecessary background processing.",
+          "Improved memory management during extended listening sessions.",
+          "Limited simultaneous audio analysis to reduce memory spikes.",
+          "Added persistent analysis caching to avoid repeatedly processing songs.",
+          "Introduced safeguards for analyzing unusually long tracks.",
+          "Added cache size limits to prevent unnecessary memory growth.",
+          "Optimized visualizer performance when the application is minimized.",
+          "Introduced a manual artwork optimization tool in Settings.",
+          "Improved overall resource handling and application efficiency."
+        ]
+      },
+      {
+        "title": "📋 Manual Queue Management",
+        "items": [
+          "Removed automatic queue generation to give users full control over upcoming playback.",
+          "Updated Upcoming to display only manually queued songs.",
+          "Added Save Queue to save the current Upcoming queue as a playlist.",
+          "Added Clear Queue to remove upcoming tracks without interrupting playback.",
+          "Introduced automatic saving of queued songs and their order.",
+          "Added automatic queue restoration when restarting Beroxity Music.",
+          "Preserved drag-and-drop queue rearranging and Play Next functionality.",
+          "Improved persistence of manually arranged song order.",
+          "Ensured saving or clearing the queue does not interrupt the currently playing song."
+        ]
+      },
+      {
+        "title": "🎨 Queue Interface Improvements",
+        "items": [
+          "Redesigned the Queue panel for a cleaner and more consistent layout.",
+          "Improved queue visibility and readability across different window sizes.",
+          "Improved responsive behaviour when resizing or using compact mode.",
+          "Kept the Queue panel docked alongside the main interface.",
+          "Improved spacing and alignment for Save Queue, Clear Queue, and Upcoming controls.",
+          "Added independent queue scrolling while keeping important controls visible.",
+          "Refined song row spacing and drag-and-drop interactions.",
+          "Fixed the Queue panel overlapping the main interface in compact mode.",
+          "Fixed cramped queue controls at smaller window sizes.",
+          "Fixed inconsistent queue positioning between compact and maximized windows."
+        ]
+      },
+      {
+        "title": "▶️ Playlist Playback",
+        "items": [
+          "Added Play buttons directly to playlist cards.",
+          "Introduced Play/Pause controls inside individual playlists.",
+          "Added continuous playlist playback in song order.",
+          "Added Shuffle support when starting playlist playback.",
+          "Starting a playlist automatically queues its remaining songs.",
+          "Switching playlists replaces the Upcoming queue with the selected playlist.",
+          "Improved playlist accessibility with dedicated playback controls.",
+          "Added visual hover effects to playlist Play buttons.",
+          "Prevented playback attempts on empty playlists.",
+          "Maintained compatibility with Smart Crossfade and existing audio settings.",
+          "Preserved manual Save Queue and Clear Queue functionality."
+        ]
+      },
+      {
+        "title": "⚙️ Settings & Interface Fixes",
+        "items": [
+          "Fixed Audio Normalization displaying at half width in Settings.",
+          "Improved spacing and alignment across audio settings.",
+          "Simplified Audio Normalization descriptions for better readability.",
+          "Improved visual consistency between Playback, Equalizer, and Audio Normalization settings.",
+          "Improved access to advanced audio settings and saved sound profiles.",
+          "Preserved the existing dark purple application design."
+        ]
+      }
+    ]
+  },
+  {
     "title": "Beroxity Music — v0.4.220 Alpha",
     "version": "v0.4.220 Alpha",
     "date": "22 October 2026",
