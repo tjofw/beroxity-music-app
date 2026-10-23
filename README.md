@@ -1,20 +1,28 @@
-# BEROXITY MUSIC — Changelog Website
+# BEROXITY MUSIC — Website v2
 
-Free static website for GitHub Pages. No build tools or paid hosting required.
+Live site: https://tjofw.github.io/beroxity-music-app/
 
-## Publish
+## Installation
 
-1. Sign in to GitHub and create a **public** repository named `beroxity-music-changelog`.
-2. Select **Add file → Upload files**, then upload `index.html` and `changelog.json` from this folder. Commit them to the `main` branch at the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose `main` and `/ (root)`; save.
-6. Once GitHub finishes publishing, your site will be at `https://YOUR-USERNAME.github.io/beroxity-music-changelog/`.
+1. Extract this ZIP.
+2. Upload **all files and folders**, including the hidden `.pages.yml` and `.github/workflows` folders, into the root of your existing `tjofw/beroxity-music-app` GitHub repository. Overwrite `index.html` and `changelog.json`. Keep the repository public and GitHub Pages on main/root.
+3. In repository **Settings → Actions → General → Workflow permissions**, select **Read and write permissions** if the changelog-index workflow cannot push.
+4. Go to https://app.pagescms.org/ and sign in with GitHub. Install/authorize the Pages CMS GitHub App for **only** `tjofw/beroxity-music-app`.
+5. Open the repository in Pages CMS. Choose **Changelog releases**, create a release, and save it. Choose **Published** for a public release, or **Draft** to hide it.
+6. GitHub Actions automatically regenerates `changelog.json` after changes under `releases/`. Check **Actions → Build changelog index** if it does not update. Pages redeploys after the generated index is committed.
 
-## Add future updates
+## How this works
 
-Edit `changelog.json` on GitHub. Add a new release object at the **top** of the JSON array, separated from the next release by a comma. Use the existing release as a template. The website updates after you commit changes.
+- `releases/*.json`: source files managed by Pages CMS.
+- `.pages.yml`: editor configuration, including sections and item lists.
+- `build_changelog.py`: generates the public JSON index from **Published** entries only.
+- `.github/workflows/update-changelog.yml`: regenerates and commits the index.
+- `changelog.json`: public index loaded by the site; do not edit manually once CMS is active.
 
-The initial entry is based on the development notes supplied in chat. Its date is deliberately blank because no release date was specified. Set it to a real date in `YYYY-MM-DD` format if you wish.
+## Security
 
-Note: GitHub Pages sites and repository contents are publicly accessible. Do not commit private keys, tokens, or secrets.
+The site's Login and Admin links open the **external** Pages CMS editor. GitHub OAuth is handled by Pages CMS; the public GitHub Pages site does **not** authenticate anyone or store passwords/tokens. The Admin page is a public instruction page, not a private dashboard. Actual edit rights are controlled by GitHub repository permissions. No GitHub token should be added to public files.
+
+## Notes
+
+The site retains the existing published changelog. Release dates can be filled in when known. The hosted Pages CMS UI may change. The workflow needs repository write permissions to commit the generated JSON. If your repository uses protected branches, workflow pushes may require different settings.
