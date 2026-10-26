@@ -1,5 +1,51 @@
-# ADD ONLY these entries beneath the EXISTING `content:` list in .pages.yml.
-# Do not add a second `content:` key or replace your Changelog releases entry.
+media: media
+content:
+  - name: releases
+    label: Changelog releases
+    type: collection
+    path: releases
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields: [title, version, date, status]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Release title
+        type: string
+        required: true
+      - name: version
+        label: Version / release label
+        type: string
+        required: true
+      - name: date
+        label: Date (YYYY-MM-DD)
+        type: string
+      - name: status
+        label: Publishing status
+        type: select
+        options:
+          values: [Published, Draft]
+      - name: summary
+        label: Summary
+        type: text
+      - name: sections
+        label: Changelog sections
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Section heading
+            type: string
+          - name: items
+            label: Changes
+            type: string
+            list: true
+
   - name: roadmap
     label: Development Roadmap
     type: file
