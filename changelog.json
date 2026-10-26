@@ -1,5 +1,192 @@
 [
   {
+    "title": "Beroxity Music — v0.6.641 Alpha",
+    "version": "v0.6.641 Alpha",
+    "date": "26 October 2026",
+    "status": "Published",
+    "summary": "Major library and performance update introducing a permanent liked songs collection, custom playlist artwork, descriptions, advanced searching and sorting, and improved playlist navigation. Features a substantial memory management overhaul, optimised IndexedDB storage, album artwork deduplication, and faster albums and artists browsing. Also includes improved amart crossfade stability, stream dock queue synchronisation, custom Beroxity branding, smoother sidebar animations, and extensive playback and interface bug fixes.",
+    "sections": [
+      {
+        "title": "🎵 Smart Crossfade & Seamless Playback",
+        "items": [
+          "Improved Smart Crossfade for smoother, more reliable transitions between songs.",
+          "Introduced an improved audio handoff system to reduce interruptions when skipping tracks.",
+          "Added short overlapping audio transitions to reduce momentary silence.",
+          "Improved outgoing and incoming audio stream handling during crossfades.",
+          "Refined crossfade timing for more consistent playback.",
+          "Improved playback transitions when rapidly skipping between tracks."
+        ]
+      },
+      {
+        "title": "🔊 Audio Normalization & Volume Stability",
+        "items": [
+          "Improved audio normalization to reduce sudden volume increases between songs.",
+          "Introduced a shared master audio limiter to better control volume peaks during overlapping playback.",
+          "Improved compatibility between Smart Crossfade, Audio Normalization, and Equalizer settings.",
+          "Refined audio gain handling for more consistent listening levels.",
+          "Improved Web Audio API gain scheduling and audio stream transitions."
+        ]
+      },
+      {
+        "title": "⏩ Seek Bar & Playback Fixes",
+        "items": [
+          "Fixed an issue where the playback seek bar could become unresponsive.",
+          "Restored responsive clicking and dragging within the playback progress bar.",
+          "Updated seek-to-end behaviour to use the crossfade engine instead of abruptly skipping tracks.",
+          "Improved transitions when seeking near the end of a song.",
+          "Preserved normal seeking without introducing unnecessary fade delays.",
+          "Addressed abrupt audio cut-offs during seek-to-end transitions.",
+          "Improved audio handoff reliability during rapid playback changes."
+        ]
+      },
+      {
+        "title": "💜 Liked Songs Collection",
+        "items": [
+          "Introduced a permanent Liked Songs collection under Your Library.",
+          "Added dedicated Liked Songs navigation in the sidebar.",
+          "Songs are automatically added when favourited and removed when unliked.",
+          "Preserved existing favourites and automatically included them in Liked Songs.",
+          "Added Play, Pause, and Shuffle Play controls.",
+          "Introduced searching by song title, artist, or album.",
+          "Added sorting by recently liked, first liked, title, artist, and duration.",
+          "Added total song count and combined listening duration.",
+          "Protected Liked Songs from deletion, renaming, and manual song additions.",
+          "Introduced dedicated purple heart artwork and a redesigned collection header."
+        ]
+      },
+      {
+        "title": "🎨 Playlist Customisation",
+        "items": [
+          "Added the ability to edit and rename existing playlists without losing songs.",
+          "Introduced custom playlist descriptions.",
+          "Added support for custom playlist cover artwork.",
+          "Enabled uploading, replacing, and removing playlist images.",
+          "Introduced automatic image optimisation to reduce storage usage.",
+          "Added automatically generated playlist covers using artwork from included songs.",
+          "Custom uploaded artwork takes priority over automatically generated covers.",
+          "Playlist artwork now appears consistently across the sidebar, playlist cards, and playlist headers.",
+          "Playlist descriptions, artwork, and other changes are saved locally between sessions."
+        ]
+      },
+      {
+        "title": "🔍 Playlist Search & Sorting",
+        "items": [
+          "Added a search bar to the main Playlists page.",
+          "Enabled searching playlists by name or description.",
+          "Added playlist sorting by creation order, name, and song count.",
+          "Introduced a dedicated search bar inside individual playlists.",
+          "Added searching within playlists by song title, artist, or album.",
+          "Added track sorting by playlist order, title, artist, album, and duration.",
+          "Searching and sorting no longer permanently modify the saved playlist order."
+        ]
+      },
+      {
+        "title": "🖼️ Playlist & Library Interface Redesign",
+        "items": [
+          "Redesigned playlist headers with larger artwork and improved information layouts.",
+          "Moved playlist artwork alongside playlist names, descriptions, and song counts.",
+          "Reorganised playlist playback and management controls.",
+          "Improved spacing between playlist details, controls, and track listings.",
+          "Updated responsive playlist layouts for smaller application windows.",
+          "Moved Create Playlist exclusively to the main Playlists page.",
+          "Added playlist artwork thumbnails to the sidebar.",
+          "Enabled opening playlists directly from their sidebar thumbnails.",
+          "Improved collapsed sidebar playlist accessibility.",
+          "Redesigned Liked Songs with a dedicated purple-themed header and simplified controls.",
+          "Improved navigation highlighting between Playlists, Liked Songs, and Your Library."
+        ]
+      },
+      {
+        "title": "🎛️ Stream Dock Queue Synchronisation",
+        "items": [
+          "Fixed Stream Dock Next playing tracks in their original order instead of the manually rearranged queue order.",
+          "Fixed outdated queue information being used by Stream Dock playback commands.",
+          "Stream Dock now follows the latest Upcoming order after drag-and-drop rearranging.",
+          "Improved consistency between in-app and Stream Dock Next controls.",
+          "Updated Stream Dock event handling to reference the latest playback and queue state.",
+          "Reduced brief audio interruptions during rapid track skipping.",
+          "Preserved Smart Crossfade and existing hardware playback controls."
+        ]
+      },
+      {
+        "title": "▶️ Playback & Empty Queue Fixes",
+        "items": [
+          "Fixed skipping with an empty Upcoming queue leaving playback paused on the previous song.",
+          "Skipping with no remaining tracks now clears the current song and returns the player to its idle state.",
+          "Added a Nothing playing message when no further tracks are available.",
+          "Fixed previous song artwork and information remaining visible after the queue was exhausted.",
+          "Improved consistency between in-app Next and Stream Dock controls at the end of the queue."
+        ]
+      },
+      {
+        "title": "💜 Beroxity Branding & Sidebar Animations",
+        "items": [
+          "Replaced the original music waveform icon with the official purple 3D Beroxity logo.",
+          "Added custom logo support in expanded and collapsed sidebar modes.",
+          "Preserved the Beroxity Music wordmark in the expanded sidebar.",
+          "Improved logo alignment and positioning alongside navigation controls.",
+          "Introduced smooth 340ms sidebar expansion and collapse transitions.",
+          "Navigation labels now gradually appear as the sidebar expands.",
+          "Improved playlist name transitions and reduced abrupt layout changes."
+        ]
+      },
+      {
+        "title": "🧠 Memory Management Overhaul",
+        "items": [
+          "Significantly reduced memory consumption during normal playback and library navigation.",
+          "Optimised resource handling for music libraries containing thousands of tracks.",
+          "Improved memory recovery after leaving resource-intensive application pages.",
+          "Reduced unnecessary processing and temporary memory allocations.",
+          "Improved overall renderer efficiency while preserving playback functionality.",
+          "Reduced memory spikes when browsing artwork-heavy library sections."
+        ]
+      },
+      {
+        "title": "💾 IndexedDB & Artwork Optimisations",
+        "items": [
+          "Introduced a separate lightweight song metadata store within IndexedDB.",
+          "Improved startup loading by separating metadata retrieval from full audio file access.",
+          "Added incremental migration for existing music libraries.",
+          "Updated imports, metadata edits, duration changes, and deletions to keep metadata synchronised.",
+          "Preserved existing music files, playlists, favourites, and listening statistics.",
+          "Introduced album artwork deduplication to reduce redundant memory usage.",
+          "Improved memory efficiency when multiple tracks share the same artwork.",
+          "Reduced unnecessary artwork processing during playlist rendering."
+        ]
+      },
+      {
+        "title": "⚡ Library & Now Playing Performance",
+        "items": [
+          "Introduced batched rendering for Albums and Artists collections.",
+          "Album and artist cards now load in groups of 48 as users scroll.",
+          "Reduced simultaneous artwork rendering in large music libraries.",
+          "Optimised artist track-count calculations to avoid repeatedly scanning the entire library.",
+          "Improved navigation performance between Tracks, Albums, and Artists.",
+          "Reduced visualizer rendering frequency to approximately 30 FPS.",
+          "Optimised blurred album artwork backgrounds to reduce rendering overhead.",
+          "Improved memory behaviour when entering and leaving Now Playing.",
+          "Preserved existing visualizer animations and playback functionality."
+        ]
+      },
+      {
+        "title": "🛠️ Sidebar Stability & UI Fixes",
+        "items": [
+          "Fixed distorted navigation layouts when the sidebar was collapsed.",
+          "Fixed navigation labels appearing partially visible or cut off.",
+          "Corrected sidebar buttons overflowing at smaller window sizes.",
+          "Resolved conflicting CSS rules affecting sidebar layouts.",
+          "Improved icon alignment throughout the collapsed sidebar.",
+          "Improved playlist artwork positioning and accessibility.",
+          "Restored correct spacing between navigation icons and labels.",
+          "Corrected sidebar branding and logo positioning.",
+          "Reduced visual jumping and clipping during sidebar animations.",
+          "Improved layout stability when resizing the application window.",
+          "Preserved existing playlists, Liked Songs, audio settings, and Stream Dock functionality."
+        ]
+      }
+    ]
+  },
+  {
     "title": "Beroxity Music — v0.6.02 Alpha",
     "version": "v0.6.02 Alpha",
     "date": "23 October 2026",
