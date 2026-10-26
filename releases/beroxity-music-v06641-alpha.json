@@ -3,7 +3,7 @@
   "version": "v0.6.641 Alpha",
   "date": "26 October 2026",
   "status": "Published",
-  "summary": "Major library and performance update introducing a permanent liked songs collection, custom playlist artwork, descriptions, advanced searching and sorting, and improved playlist navigation. Features a substantial memory management overhaul, optimised IndexedDB storage, album artwork deduplication, and faster albums and artists browsing. Also includes improved amart crossfade stability, stream dock queue synchronisation, custom Beroxity branding, smoother sidebar animations, and extensive playback and interface bug fixes.",
+  "summary": "Major library and performance update introducing a permanent liked songs collection, custom playlist artwork, descriptions, advanced searching and sorting, and improved playlist navigation. Features a substantial memory management overhaul, optimised IndexedDB storage, album artwork deduplication, and faster albums and artists browsing. Also includes improved smart crossfade stability, stream dock queue synchronisation, custom Beroxity branding, smoother sidebar animations, and extensive playback and interface bug fixes.",
   "sections": [
     {
       "title": "🎵 Smart Crossfade & Seamless Playback",
