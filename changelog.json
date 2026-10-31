@@ -1,5 +1,103 @@
 [
   {
+    "title": "Beroxity Music — v0.7.204 Alpha",
+    "version": "v0.7.204 Alpha",
+    "date": "31 October 2026",
+    "status": "Published",
+    "summary": "Introduced a comprehensive backup & restore system featuring full-library backups, automatic backup management, compressed exports, integrity verification, and isolated recovery testing. Added safe restore previews, duplicate detection, resumable audio migration, and recovery of playlists, favourites, listening history, and settings. Redesigned the backup & restore interface for easier navigation. Successfully verified all 5,230 test audio files with zero missing files or SHA-256 mismatches, while preserving the existing music library.",
+    "sections": [
+      {
+        "title": "💾 Backup Management",
+        "items": [
+          "Introduced manual backup creation with compressed backup exports.",
+          "Added automatic backups with backup history and management controls.",
+          "Added protection against accidentally overwriting existing backups.",
+          "Automatic backup retention now keeps the latest 10 backups.",
+          "Introduced backup verification and integrity checks.",
+          "Added options to inspect and manage completed backups."
+        ]
+      },
+      {
+        "title": "📦 Full Library Backup System",
+        "items": [
+          "Introduced full-library backups containing music files, metadata, album artwork, playlists, favourites, and saved application data.",
+          "Added native Windows folder selection for backup destinations.",
+          "Introduced destination validation, write-permission checks, and available disk-space checks.",
+          "Implemented chunked audio transfers and compressed backup manifests.",
+          "Added safeguards against incomplete or interrupted backups.",
+          "Introduced read-only backup inspection and library comparison tools."
+        ]
+      },
+      {
+        "title": "🔄 Restore & Recovery",
+        "items": [
+          "Added backup previews before starting restoration.",
+          "Introduced song matching, duplicate detection, and conflict checks.",
+          "Added recovery support for playlists, favourites, listening counts, listening history, and saved preferences.",
+          "Added explicit confirmation requirements before restoration operations.",
+          "Introduced rollback snapshots for saved-settings restoration.",
+          "Implemented resumable native audio migration with progress reporting and stop controls.",
+          "Prevented mismatched existing audio files from being overwritten.",
+          "Improved preservation of existing metadata during recovery."
+        ]
+      },
+      {
+        "title": "🛡️ Isolated Restore Test Mode",
+        "items": [
+          "Introduced a separate restore test mode to protect the normal music library.",
+          "Added a prominent gold \"RESTORE TEST MODE\" banner.",
+          "Restricted experimental recovery and migration operations to the isolated test environment.",
+          "Added storage-capacity checks and recovery safety validations.",
+          "Introduced native audio playback testing with IndexedDB fallback.",
+          "Added failure simulations and recovery verification tools.",
+          "Maintained separation between normal and restore-test profiles.",
+          "Successfully returned to normal mode with the existing music library and saved data preserved."
+        ]
+      },
+      {
+        "title": "🎨 Backup & Restore Interface Redesign",
+        "items": [
+          "Redesigned and reorganised the Backup & Restore Settings interface.",
+          "Consolidated backup tools into Create & Manage Backups, Restore Library, and Verify & Repair.",
+          "Added support for manually pasting a backup folder path.",
+          "Introduced a Browse button for selecting backup folders through Windows Explorer.",
+          "Redesigned the Restore Library panel with improved spacing and alignment.",
+          "Improved backup path input sizing and preview button positioning.",
+          "Added clearer read-only preview and safety messaging.",
+          "Reduced unnecessary Settings panels and visual clutter.",
+          "Preserved existing recovery controls and confirmation requirements."
+        ]
+      },
+      {
+        "title": "🔧 Reliability & Technical Fixes",
+        "items": [
+          "Fixed recovery progress state issues.",
+          "Resolved Rust backend integration conflicts.",
+          "Improved backup folder validation and error handling.",
+          "Improved duplicate detection and preservation of existing metadata.",
+          "Strengthened native audio file verification.",
+          "Improved backup preview reliability.",
+          "Improved readability and navigation throughout Backup & Restore.",
+          "Added stronger protection against interrupted recovery operations."
+        ]
+      },
+      {
+        "title": "✅ Full Library Recovery Verification",
+        "items": [
+          "Successfully inspected a backup containing 5,230 test songs.",
+          "Verified all 5,230 native audio files.",
+          "Confirmed 5,230 successful SHA-256 integrity matches.",
+          "Confirmed zero missing audio files and zero hash mismatches.",
+          "Verified recovery data for 13 favourites and 2 playlists.",
+          "Confirmed 25 saved settings, 585 listening-count records, and 579 dated listening records.",
+          "Successfully completed isolated full-library recovery testing.",
+          "Confirmed the normal music library remained intact after exiting Restore Test Mode.",
+          "Experimental full-library restoration remains restricted to isolated Restore Test Mode."
+        ]
+      }
+    ]
+  },
+  {
     "title": "Beroxity Music — v0.6.641 Alpha",
     "version": "v0.6.641 Alpha",
     "date": "26 October 2026",
