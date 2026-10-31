@@ -1,0 +1,24 @@
+name: Publish changelog to Discord
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Exact version from changelog.json (e.g. v0.7.204 Alpha)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Send release embed
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: python3 .github/scripts/publish_discord.py
