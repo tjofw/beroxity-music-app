@@ -7,18 +7,48 @@ on:
         description: 'Exact version from changelog.json (e.g. v0.7.204 Alpha)'
         required: true
         type: string
+  workflow_run:
+    workflows: ["Build Changelog"]
+    types: [completed]
+    branches: [main]
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: discord-changelog-publisher
+  cancel-in-progress: false
 
 jobs:
   announce:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out main branch
         uses: actions/checkout@v4
-      - name: Send release embed
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Send new release embeds
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PUBLISH_MODE: ${{ github.event_name == 'workflow_dispatch' && 'manual' || 'auto' }}
           RELEASE_VERSION: ${{ inputs.version }}
+          BUILD_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
         run: python3 .github/scripts/publish_discord.py
+      - name: Save announcement history
+        run: |
+          if git diff --quiet -- .github/discord-announced.json; then
+            echo 'No new announcements to record.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/discord-announced.json
+          git commit -m 'Track Discord changelog announcements'
+          git push
